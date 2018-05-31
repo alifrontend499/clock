@@ -48,10 +48,13 @@ body {
 
 .clock-inner {
   position: relative;
+
+  // display: none;
+
   .center-point {
     @include pos_ver_cen;
     @include border(#000, 2px);
-    @include height_width(10px, 10px);
+    @include height_width(50px, 50px);
     @include bor_rad();
     background-color: #000;
   }
@@ -63,104 +66,37 @@ body {
     span {
       display: block;
     }
-
-    &.one {
-      transform: translateX(-50%)  rotate(30deg);
-      span {
-        transform: rotate(-30deg);
-      }
-    }
-
-    &.two {
-      transform: translateX(-50%) rotate(60deg);
-      span {
-        transform: rotate(-60deg);
-      }
-    }
-
-    &.three {
-
-      transform: translateX(-50%) rotate(90deg);
-      span {
-        transform: rotate(-90deg);
-      }
-    }
-
-    &.four {
-
-      transform: translateX(-50%) rotate(120deg);
-      span {
-        transform: rotate(-120deg);
-      }
-    }
-
-    &.five {
-
-      transform: translateX(-50%) rotate(150deg);
-      span {
-        transform: rotate(-150deg);
-      }
-    }
-
-    &.six {
-
-      transform: translateX(-50%) rotate(180deg);
-      span {
-        transform: rotate(-180deg);
-      }
-    }
-
-    &.seven {
-
-      transform: translateX(-50%) rotate(210deg);
-      span {
-        transform: rotate(-210deg);
-      }
-    }
-
-    &.eight {
-
-      transform: translateX(-50%) rotate(240deg);
-      span {
-        transform: rotate(-240deg);
-      }
-    }
-
-    &.nine {
-
-      transform: translateX(-50%) rotate(270deg);
-      span {
-        transform: rotate(-270deg);
-      }
-    }
-
-    &.ten {
-
-      transform: translateX(-50%) rotate(300deg);
-      span {
-        transform: rotate(-300deg);
-      }
-    }
-
-    &.eleven {
-
-      transform: translateX(-50%) rotate(330deg);
-      span {
-        transform: rotate(-330deg);
-      }
-    }
-
-    &.tweleve {
-      transform: translateX(-50%);
-    }
   }
 
-  .cl-main {
+  .cl-seconds {
     position: absolute;
     bottom: 50%;
     left: calc(50% - 1px);
     @include height_width(calc(50% - 35px), 2px);
     background-color: red;
     transform-origin: bottom;
+    z-index: 9999;
+  }
+
+  .cl-minutes {
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 4px);
+    @include height_width(calc(50% - 40px), 8px);
+    background-color: #333;
+    transform-origin: bottom;
+
+    transform: rotate(50deg);
+  }
+
+  .cl-hours {
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 4px);
+    @include height_width(calc(50% - 60px), 8px);
+    background-color: #666;
+    transform-origin: bottom;
+
+    transform: rotate(10deg);
   }
 }
