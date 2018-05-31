@@ -12,7 +12,6 @@ window.onload = function() {
   let secondsDistance = circleDegree / mainDifference;
   let incSec = circleDegree / mainDifference;
 
-console.log(minutesDistance);
   allNumbers.forEach(function(elem) {
     let valReq = minutesDistance * startVal;
     elem.style.cssText = "transform: translateX(-50%) rotate(" + valReq + "deg);";
@@ -30,3 +29,17 @@ console.log(minutesDistance);
 
   var secInterval = setInterval(cl_main_movement, 1000);
 }
+
+
+
+let eem = document.querySelector('.output');
+function seconds() {
+  let date = new Date();
+  let time = date.getTime() * 1000;
+  console.log(time);
+
+  console.log(2000 / 2);
+
+
+}
+seconds();
