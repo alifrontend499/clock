@@ -1,0 +1,166 @@
+@import "components/_variables";
+@import "components/_mixins";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: calibri;
+  font-size: 20px;
+  height: 100vh;
+  display: table;
+  width: 100%;
+
+  background: rgb(179,220,237); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.main {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.clock-outer {
+  height: $main-height_width;
+  width: $main-height_width;
+  margin: 0 auto;
+  @include bor_rad;
+  padding: 10px 10px 10px 10px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+  background: rgb(245,246,246); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: 4px 4px 16px #333;
+  box-shadow: 4px 4px 16px #333;
+  .clock-inner {
+    @include hw100;
+    border: 1px solid #ededed;
+    border-radius: 100%;
+    background-color: #fff;
+  }
+}
+
+.clock-inner {
+  position: relative;
+  .center-point {
+    @include pos_ver_cen;
+    @include border(#000, 2px);
+    @include height_width(10px, 10px);
+    @include bor_rad();
+    background-color: #000;
+  }
+  .number {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    padding: 7px 0;
+    span {
+      display: block;
+    }
+
+    &.one {
+      transform: translateX(-50%)  rotate(30deg);
+      span {
+        transform: rotate(-30deg);
+      }
+    }
+
+    &.two {
+      transform: translateX(-50%) rotate(60deg);
+      span {
+        transform: rotate(-60deg);
+      }
+    }
+
+    &.three {
+
+      transform: translateX(-50%) rotate(90deg);
+      span {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.four {
+
+      transform: translateX(-50%) rotate(120deg);
+      span {
+        transform: rotate(-120deg);
+      }
+    }
+
+    &.five {
+
+      transform: translateX(-50%) rotate(150deg);
+      span {
+        transform: rotate(-150deg);
+      }
+    }
+
+    &.six {
+
+      transform: translateX(-50%) rotate(180deg);
+      span {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &.seven {
+
+      transform: translateX(-50%) rotate(210deg);
+      span {
+        transform: rotate(-210deg);
+      }
+    }
+
+    &.eight {
+
+      transform: translateX(-50%) rotate(240deg);
+      span {
+        transform: rotate(-240deg);
+      }
+    }
+
+    &.nine {
+
+      transform: translateX(-50%) rotate(270deg);
+      span {
+        transform: rotate(-270deg);
+      }
+    }
+
+    &.ten {
+
+      transform: translateX(-50%) rotate(300deg);
+      span {
+        transform: rotate(-300deg);
+      }
+    }
+
+    &.eleven {
+
+      transform: translateX(-50%) rotate(330deg);
+      span {
+        transform: rotate(-330deg);
+      }
+    }
+
+    &.tweleve {
+      transform: translateX(-50%);
+    }
+  }
+
+  .cl-main {
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 1px);
+    @include height_width(calc(50% - 35px), 2px);
+    background-color: red;
+    transform-origin: bottom;
+  }
+}

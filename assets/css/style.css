@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+
+body { font-family: calibri; font-size: 20px; height: 100vh; display: table; width: 100%; background: #b3dced; /* Old browsers */ background: -moz-linear-gradient(-45deg, #b3dced 0%, #29b8e5 50%, #bce0ee 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(-45deg, #b3dced 0%, #29b8e5 50%, #bce0ee 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(135deg, #b3dced 0%, #29b8e5 50%, #bce0ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+
+.main { display: table-cell; vertical-align: middle; width: 100%; }
+
+.clock-outer { height: 300px; width: 300px; margin: 0 auto; -webkit-border-radius: 100%; border-radius: 100%; padding: 10px 10px 10px 10px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */ background: #f5f6f6; /* Old browsers */ background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(135deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ -webkit-box-shadow: 4px 4px 16px #333; box-shadow: 4px 4px 16px #333; }
+.clock-outer .clock-inner { height: 100%; width: 100%; border: 1px solid #ededed; border-radius: 100%; background-color: #fff; }
+
+.clock-inner { position: relative; }
+.clock-inner .center-point { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border: 2px solid #000; height: 10px; width: 10px; -webkit-border-radius: 100%; border-radius: 100%; background-color: #000; }
+.clock-inner .number { position: absolute; height: 100%; left: 50%; padding: 7px 0; }
+.clock-inner .number span { display: block; }
+.clock-inner .number.one { transform: translateX(-50%) rotate(30deg); }
+.clock-inner .number.one span { transform: rotate(-30deg); }
+.clock-inner .number.two { transform: translateX(-50%) rotate(60deg); }
+.clock-inner .number.two span { transform: rotate(-60deg); }
+.clock-inner .number.three { transform: translateX(-50%) rotate(90deg); }
+.clock-inner .number.three span { transform: rotate(-90deg); }
+.clock-inner .number.four { transform: translateX(-50%) rotate(120deg); }
+.clock-inner .number.four span { transform: rotate(-120deg); }
+.clock-inner .number.five { transform: translateX(-50%) rotate(150deg); }
+.clock-inner .number.five span { transform: rotate(-150deg); }
+.clock-inner .number.six { transform: translateX(-50%) rotate(180deg); }
+.clock-inner .number.six span { transform: rotate(-180deg); }
+.clock-inner .number.seven { transform: translateX(-50%) rotate(210deg); }
+.clock-inner .number.seven span { transform: rotate(-210deg); }
+.clock-inner .number.eight { transform: translateX(-50%) rotate(240deg); }
+.clock-inner .number.eight span { transform: rotate(-240deg); }
+.clock-inner .number.nine { transform: translateX(-50%) rotate(270deg); }
+.clock-inner .number.nine span { transform: rotate(-270deg); }
+.clock-inner .number.ten { transform: translateX(-50%) rotate(300deg); }
+.clock-inner .number.ten span { transform: rotate(-300deg); }
+.clock-inner .number.eleven { transform: translateX(-50%) rotate(330deg); }
+.clock-inner .number.eleven span { transform: rotate(-330deg); }
+.clock-inner .number.tweleve { transform: translateX(-50%); }
+.clock-inner .cl-main { position: absolute; bottom: 50%; left: calc(50% - 1px); height: calc(50% - 35px); width: 2px; background-color: red; transform-origin: bottom; }
+
+/*# sourceMappingURL=style.css.map */
