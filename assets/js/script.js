@@ -10,7 +10,9 @@ window.onload = function() {
   let minutesDistance = circleDegree / 12;
   let startVal = 0;
   let secondsDistance = circleDegree / mainDifference;
+  let incSec = circleDegree / mainDifference;
 
+console.log(minutesDistance);
   allNumbers.forEach(function(elem) {
     let valReq = minutesDistance * startVal;
     elem.style.cssText = "transform: translateX(-50%) rotate(" + valReq + "deg);";
@@ -20,9 +22,7 @@ window.onload = function() {
 
   function cl_main_movement() {
     cl_seconds.style.cssText = "transform: rotate(" + secondsDistance + "deg)";
-
-    console.log(secondsDistance);
-    secondsDistance += 6;
+    secondsDistance += incSec;
     if(secondsDistance >= circleDegree) {
       secondsDistance = 0;
     }
