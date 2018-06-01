@@ -1,99 +1,120 @@
 @import "components/_variables";
 @import "components/_mixins";
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-body {
-  font-family: calibri;
-  font-size: 20px;
-  height: 100vh;
-  display: table;
-  width: 100%;
 
-  background: rgb(179,220,237); /* Old browsers */
-  background: -moz-linear-gradient(-45deg, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+body {
+    font-family: calibri;
+    font-size: 20px;
+    height: 100vh;
+    display: table;
+    width: 100%;
+    background: rgb(179, 220, 237);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 .main {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
 }
 
 .clock-outer {
-  height: $main-height_width;
-  width: $main-height_width;
-  margin: 0 auto;
-  @include bor_rad;
-  padding: 10px 10px 10px 10px;
-  background: rgb(76,76,76); /* Old browsers */
-  background: -moz-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-box-shadow: 4px 4px 16px #333;
-  box-shadow: 4px 4px 16px #333;
-  .clock-inner {
-    @include hw100;
-    border: 1px solid #ededed;
-    border-radius: 100%;
-    background: rgb(226,226,226); /* Old browsers */
-    background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
+    height: $main-height_width;
+    width: $main-height_width;
+    margin: 0 auto;
+    @include bor_rad;
+    padding: 10px 10px 10px 10px;
+    background: rgb(76, 76, 76);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(17, 17, 17, 1) 60%, rgba(43, 43, 43, 1) 76%, rgba(28, 28, 28, 1) 91%, rgba(19, 19, 19, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(17, 17, 17, 1) 60%, rgba(43, 43, 43, 1) 76%, rgba(28, 28, 28, 1) 91%, rgba(19, 19, 19, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(76, 76, 76, 1) 0%, rgba(89, 89, 89, 1) 12%, rgba(102, 102, 102, 1) 25%, rgba(71, 71, 71, 1) 39%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(17, 17, 17, 1) 60%, rgba(43, 43, 43, 1) 76%, rgba(28, 28, 28, 1) 91%, rgba(19, 19, 19, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    -webkit-box-shadow: 4px 4px 16px #333;
+    box-shadow: 4px 4px 16px #333;
+    .clock-inner {
+        @include hw100;
+        border: 1px solid #ededed;
+        border-radius: 100%;
+        background: rgb(226, 226, 226);
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
 }
 
 .clock-inner {
-  position: relative;
-  .center-point {
-    @include pos_ver_cen;
-    @include border(#000, 2px);
-    @include height_width(50px, 50px);
-    @include bor_rad();
-    background-color: #000;
-  }
-  .number {
-    position: absolute;
-    height: 50%;
-    left: 50%;
-    padding: 7px 0;
-    transform-origin: bottom;
-    span {
-      display: block;
+    position: relative;
+    .center-point {
+        @include pos_ver_cen;
+        @include border(#000, 2px);
+        @include height_width(50px, 50px);
+        @include bor_rad();
+        background-color: #000;
     }
-  }
- 
 
-  .ci {
-    position: absolute;
-    bottom: 50%;
-    transform-origin: bottom;
-    @include bor_rad(40%);
-    &.cl-seconds {
-      left: calc(50% - 1px);
-      @include height_width(calc(50% - 35px), 2px);
-      z-index: 9999;
-      background-color: red;
+    .number {
+        position: absolute;
+        height: 50%;
+        left: 50%;
+        padding: 7px 0;
+        transform-origin: bottom;
+        span {
+            display: block;
+        }
     }
-    &.cl-minutes {
-      left: calc(50% - 4px);
-      @include height_width(calc(50% - 40px), 8px);
-      background-color: #666;
 
-      transform: rotate(30deg)
+    .ci {
+        position: absolute;
+        bottom: 50%;
+        transform-origin: bottom;
+        @include bor_rad(40%);
+        &.cl-seconds {
+            left: calc(50% - 1px);
+            @include height_width(calc(50% - 35px), 2px);
+            z-index: 9999;
+            background-color: red;
+        }
+        &.cl-minutes {
+            left: calc(50% - 4px);
+            @include height_width(calc(50% - 40px), 8px);
+            background-color: #666;
+            transform: rotate(30deg)
+        }
+        &.cl-hours {
+            left: calc(50% - 5px);
+            @include height_width(calc(50% - 60px), 10px);
+            background-color: #000;
+            transform: rotate(60deg)
+        }
     }
-    &.cl-hours {
-      left: calc(50% - 5px);
-      @include height_width(calc(50% - 60px), 10px);
-      background-color: #000;
 
-      transform: rotate(60deg)
+    .date-display-inner {
+
+      // position: absolute;
+      @include height_width(100, 100);
+      @include border;
+
     }
-  }
 }
+
