@@ -1,6 +1,18 @@
 @mixin border($color: #333, $width: 1px, $style: solid) {
   border: $width $style $color;
 }
+@mixin border-top($color: #333, $width: 1px, $style: solid) {
+  border-top: $width $style $color;
+}
+@mixin border-right($color: #333, $width: 1px, $style: solid) {
+  border-right: $width $style $color;
+}
+@mixin border-bottom($color: #333, $width: 1px, $style: solid) {
+  border-bottom: $width $style $color;
+}
+@mixin border-left($color: #333, $width: 1px, $style: solid) {
+  border-left: $width $style $color;
+}
 
 @mixin hw100 {
   height: 100%;
@@ -49,4 +61,11 @@
 @mixin height_width($height: auto, $width: auto) {
   height: $height;
   width: $width;
+}
+
+
+@mixin inline_element($va: top) {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: $va;
 }

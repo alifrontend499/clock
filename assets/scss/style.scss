@@ -67,12 +67,10 @@ body {
     position: relative;
     .center-point {
         @include pos_ver_cen;
-        @include border(#000, 2px);
         @include height_width(50px, 50px);
         @include bor_rad();
-        background-color: #000;
+        background-color: #505050;
     }
-
     .number {
         position: absolute;
         height: 50%;
@@ -83,7 +81,6 @@ body {
             display: block;
         }
     }
-
     .ci {
         position: absolute;
         bottom: 50%;
@@ -99,22 +96,37 @@ body {
             left: calc(50% - 4px);
             @include height_width(calc(50% - 40px), 8px);
             background-color: #666;
-            transform: rotate(30deg)
+            transform: rotate(0deg)
         }
         &.cl-hours {
             left: calc(50% - 5px);
             @include height_width(calc(50% - 60px), 10px);
             background-color: #000;
-            transform: rotate(60deg)
+            transform: rotate(0deg)
         }
     }
-
     .date-display-inner {
-
-      // position: absolute;
-      @include height_width(100, 100);
-      @include border;
-
+        position: absolute;
+        top: calc(50% + 3px);
+        right: 50px;
+        @include height_width(40px, 90px);
+        @include border(#bfbfbf);
+        box-shadow: inset 0px 0px 5px #A5A5A5;
+        transform: translateY(-50%);
+        div {
+            @include height_width(100%);
+            @include inline_element(middle);
+            text-align: center;
+            padding-top: 6.2px;
+            color: #6f6f6f;
+            &.date {
+                @include border-right(#A5A5A5);
+                width: 60%;
+            }
+            &.day {
+                @include border-left(#A5A5A5);
+                width: 40%;
+            }
+        }
     }
 }
-

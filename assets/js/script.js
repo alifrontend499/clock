@@ -39,6 +39,24 @@ window.onload = function () {
     cl_hours.style.cssText = "transform: rotate(" + hours * 30 + "deg)";
   }
   setInterval(getSecs, 1000);
-  setInterval(getMinutes, 1000);
+  setInterval(getMinutes, 1000); 
   setInterval(getHours, 1000);
+
+  function disDate() { 
+    let dateDiv = document.querySelector(".date-display-inner .date");
+    let dayDiv = document.querySelector(".date-display-inner .day");
+    let now = new Date();
+    let currentday = now.getDay();
+    let currentdate = now.getDate();
+    let dayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    if (dayDiv !== null) {
+      dayDiv.innerHTML = currentdate;
+    }
+    if (dateDiv !== null) {
+      dateDiv.innerHTML = dayArray[currentday];
+    }
+    console.log(currentdate);
+
+   }
+  disDate();
 }
