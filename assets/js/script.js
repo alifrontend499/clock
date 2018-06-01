@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   "use Strict";
   let allNumbers = document.querySelectorAll('.number');
   let cl_seconds = document.querySelector('.cl-seconds');
@@ -6,40 +6,39 @@ window.onload = function() {
   let cl_hours = document.querySelector('.cl-hours');
 
   let circleDegree = 360;
-  let mainDifference = 60;
   let minutesDistance = circleDegree / 12;
   let startVal = 0;
-  let secondsDistance = circleDegree / mainDifference;
-  let incSec = circleDegree / mainDifference;
 
-  allNumbers.forEach(function(elem) {
+  allNumbers.forEach(function (elem) {
     let valReq = minutesDistance * startVal;
     elem.style.cssText = "transform: translateX(-50%) rotate(" + valReq + "deg);";
     elem.firstElementChild.style.cssText = "transform: rotate(-" + valReq + "deg)";
     startVal++;
   });
 
-  function cl_main_movement() {
-    cl_seconds.style.cssText = "transform: rotate(" + secondsDistance + "deg)";
-    secondsDistance += incSec;
-    if(secondsDistance >= circleDegree) {
-      secondsDistance = 0;
-    }
+  function getSecs() {
+    let date = new Date();
+    var secs = date.getSeconds();
+    cl_seconds.style.cssText = "transform: rotate(" + secs * 6 + "deg)";
   }
 
-  var secInterval = setInterval(cl_main_movement, 1000);
+  function getMinutes() {
+    let date = new Date();
+    var minutes = date.getMinutes();
+    cl_minutes.style.cssText = "transform: rotate(" + minutes * 6 + "deg)";
+  }
+
+  function getHours() {
+    let date = new Date();
+    var hours = date.getHours();
+    if (hours > 12) {
+      hours -= 12;
+    } else if (hours === 0) {
+      hours = 12;
+    }
+    cl_hours.style.cssText = "transform: rotate(" + hours * 30 + "deg)";
+  }
+  setInterval(getSecs, 1000);
+  setInterval(getMinutes, 1000);
+  setInterval(getHours, 1000);
 }
-
-
-
-let eem = document.querySelector('.output');
-function seconds() {
-  let date = new Date();
-  let time = date.getTime() * 1000;
-  console.log(time);
-
-  console.log(2000 / 2);
-
-
-}
-seconds();
